@@ -15,15 +15,18 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 nav ul {
   list-style: none; }
 
+ul li {
+  list-style: none; }
+
 blockquote, q {
   quotes: none; }
 
 blockquote:before, blockquote:after {
-  content: "";
+  content: '';
   content: none; }
 
 q:before, q:after {
-  content: "";
+  content: '';
   content: none; }
 
 a {
@@ -68,5 +71,146 @@ hr {
 input, select {
   vertical-align: middle; }
 
+html {
+  height: 100%;
+  margin: 0;
+  font-size: 62.5%; }
+
+body {
+  background-color: black;
+  height: 100%;
+  font-size: 1.8rem; }
+
 .itemForm {
-  background-color: white; }
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  padding-top: 2rem; }
+  .itemForm h1 {
+    padding-bottom: 1.5rem; }
+  .itemForm article img {
+    width: 90vw; }
+  .itemForm article p {
+    padding-top: 2rem;
+    text-align: right;
+    padding-bottom: 2rem; }
+  .itemForm .selectSize {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 3rem; }
+    .itemForm .selectSize p {
+      padding-bottom: 1rem; }
+    .itemForm .selectSize form {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between; }
+      .itemForm .selectSize form input {
+        height: 8vh;
+        width: 27vw;
+        background-color: gray;
+        padding: .5rem;
+        border: 0;
+        text-transform: uppercase; }
+  .itemForm .selectColor {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 3rem; }
+    .itemForm .selectColor p {
+      padding-bottom: 1rem; }
+    .itemForm .selectColor form {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between; }
+      .itemForm .selectColor form label {
+        position: relative;
+        overflow: hidden; }
+        .itemForm .selectColor form label input {
+          position: absolute;
+          top: -20px;
+          background-color: blue; }
+          .itemForm .selectColor form label input:checked + span {
+            background-color: black; }
+        .itemForm .selectColor form label span {
+          height: 10vh;
+          width: 17vw;
+          background-color: gray;
+          padding: .5rem;
+          border: 0;
+          text-transform: uppercase;
+          display: flex;
+          cursor: pointer; }
+
+.addressForm {
+  background-color: #caccce;
+  display: flex;
+  flex-direction: column;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  padding-top: 2rem;
+  padding-bottom: 6rem; }
+  .addressForm h1 {
+    color: black;
+    padding-bottom: 1.5rem; }
+  .addressForm form fieldset .fullname, .addressForm form fieldset .email {
+    display: flex;
+    width: 90vw;
+    padding-bottom: 1rem;
+    flex-direction: column; }
+    .addressForm form fieldset .fullname h4, .addressForm form fieldset .email h4 {
+      color: black;
+      padding-bottom: 1rem; }
+    .addressForm form fieldset .fullname input, .addressForm form fieldset .email input {
+      width: 90vw;
+      height: 5vh;
+      border-color: black; }
+  .addressForm form fieldset .address {
+    display: flex;
+    padding-bottom: 1rem;
+    justify-content: space-between; }
+    .addressForm form fieldset .address .address1 {
+      flex-direction: column; }
+      .addressForm form fieldset .address .address1 input {
+        display: flex;
+        height: 5vh;
+        border-color: black;
+        width: 40vw; }
+    .addressForm form fieldset .address .address2 {
+      flex-direction: column; }
+      .addressForm form fieldset .address .address2 input {
+        height: 5vh;
+        display: flex;
+        border-color: black;
+        width: 40vw; }
+  .addressForm form fieldset .location {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1rem; }
+    .addressForm form fieldset .location .city {
+      display: flex;
+      flex-direction: column; }
+      .addressForm form fieldset .location .city input {
+        height: 5vh;
+        border-color: black;
+        width: 28vw; }
+    .addressForm form fieldset .location .state {
+      display: flex;
+      flex-direction: column; }
+      .addressForm form fieldset .location .state input {
+        height: 5vh;
+        border-color: black;
+        width: 10vw; }
+    .addressForm form fieldset .location .zip {
+      display: flex;
+      flex-direction: column; }
+      .addressForm form fieldset .location .zip input {
+        height: 5vh;
+        border-color: black; }
+  .addressForm form fieldset .country {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1rem; }
+    .addressForm form fieldset .country input {
+      height: 5vh;
+      border-color: black; }

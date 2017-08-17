@@ -13,35 +13,74 @@
         <img src="img/placeholder.jpeg" alt="Product Preview Image">
         <p>$20.00</p>
       </article>
-      <div class="">
+      <div class="selectSize">
         <p>Select a size</p>
-        <ul>
-          <li><p>S</p></li>
-          <li><p>M</p></li>
-          <li><p>L</p></li>
-        </ul>
+        <form class="size">
+          <input type="radio" name="size" value="small"> Male
+          <input type="radio" name="size" value="medium"> Female
+          <input type="radio" name="size" value="large"> Other
+        </form>
       </div>
-      <div class="">
+      <div class="selectColor">
         <p>Select a color</p>
-        <ul>
-          <li><p>red</p></li>
-          <li><p>blue</p></li>
-          <li><p>yellow</p></li>
-          <li><p>black</p></li>
-        </ul>
+        <form class="color" action=" ">
+          <label class="blue"><input type="radio" name="blueBtn"><span>w</span></label>
+          <label class="green"><input type="radio" name="greenBtn"><span></span></label>
+          <label class="yellow"><input type="radio" name="yellowBtn"><span></span></label>
+          <label class="red"><input type="radio" name="redBtn"><span></span></label>
+        </form>
       </div>
     </div>
-    <div class="addressForm">
+    <div class="addressForm">  <!--Address Form -->
+      <h1>Shipping Details</h1>
+      <form id="addressInfo" action="" method="">
+        <fieldset>
+          <div class="fullname">
+            <label for="fullName1">Full Name</label>
+            <input type="text" name="fullNameInput" id="fullName1"> </input>
+          </div>
+          <div class="email">
+            <label for="email1">Email</label>
+            <input type="text" name="emailInput" id="email1"> </input>
+            <div id="emailFeeback"> </div>
+          </div>
+          <div class="address">
+            <div class="address1">
+              <label for="addressId">Address</label>
+              <input type="text" name="addressInput" id="addressId"> </input>
+            </div>
+            <div class="address2">
+              <label for="addressId2">Address 2</label>
+              <input type="text" name="address2Input" id="addressId2"> </input>
+            </div>
+          </div>
+          <div class="location">
+            <div class="city">
+              <label for="cityId">City</label>
+              <input type="text" name="cityInput" id="cityId"> </input>
+            </div>
 
+            <div class="state">
+              <label for="stateId">State</label>
+              <input type="text" name="stateInput" id="stateId"> </input>
+            </div>
+
+            <div class="zip">
+              <label for="zipId">Zip</label>
+              <input type="text" name="zipInput" id="zipId"> </input>
+            </div>
+          </div>
+          <div class="country">
+            <label for="countryId">Country</label>
+            <input type="text" name="country" id="countryId"> </input>
+          </div>
+        </fieldset>
+      </form>
     </div>
-    <div class="checkoutForm">
 
-    </div>
+  <div class="checkoutForm">
 
-
-
-
-
+  </div>
   </body>
 
 </html>

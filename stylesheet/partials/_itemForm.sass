@@ -1,3 +1,64 @@
+//=============== ITEM FORM ===============
 .itemForm
   background-color: white
   display: flex
+  flex-direction: column
+  padding-left: 5vw
+  padding-right: 5vw
+  padding-top: 2rem
+  h1
+    padding-bottom: 1.5rem
+  article
+    img
+      width: 90vw
+    p
+      padding-top: 2rem
+      text-align: right
+      padding-bottom: 2rem
+
+  .selectSize
+    display: flex
+    flex-direction: column
+    padding-bottom: 3rem
+    p
+      padding-bottom: 1rem
+    form
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      input
+        height: 8vh
+        width: 27vw
+        background-color: gray
+        padding: .5rem
+        border: 0
+        text-transform: uppercase
+  .selectColor
+    display: flex
+    flex-direction: column
+    padding-bottom: 3rem
+    p
+      padding-bottom: 1rem
+
+    form
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      label
+        position: relative
+        overflow: hidden
+        input
+          position: absolute
+          top: -20px
+          background-color: blue
+          &:checked + span
+            background-color: black
+        span
+          height: 10vh
+          width: 17vw
+          background-color: gray
+          padding: .5rem
+          border: 0
+          text-transform: uppercase
+          display: flex
+          cursor: pointer
