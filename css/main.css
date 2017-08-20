@@ -282,10 +282,12 @@ body {
 @media screen and (min-width: 800px) {
   .itemForm .productImg {
     width: calc(100% - 1.9rem); }
-  .itemForm .selectSize form {
-    width: 100%; }
-    .itemForm .selectSize form label {
-      width: 10vw; }
+  .itemForm .selectSize {
+    width: auto; }
+    .itemForm .selectSize form {
+      width: 100%; }
+      .itemForm .selectSize form label {
+        width: 10vw; }
   .itemForm .selectColor form {
     width: 100%; }
     .itemForm .selectColor form label {
@@ -430,45 +432,49 @@ body {
     border-color: black; }
 
 @media screen and (min-width: 426px) {
-  .addressForm h1 {
-    padding: .5rem 0rem  2rem 1rem; }
-  .addressForm form fieldset {
-    width: calc(97% - 1rem);
-    padding-left: 1rem;
-    padding-right: 1rem; }
-    .addressForm form fieldset .fullname, .addressForm form fieldset .email {
-      width: 50%;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-      flex-direction: column; }
-      .addressForm form fieldset .fullname input, .addressForm form fieldset .email input {
-        height: 5vh;
-        border-color: black;
-        width: 100%; }
-    .addressForm form fieldset .address {
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-      flex-direction: column; }
-      .addressForm form fieldset .address .address1 input, .addressForm form fieldset .address .address2 input {
-        width: 100%; }
-    .addressForm form fieldset .location {
-      width: 50%; }
-      .addressForm form fieldset .location .city, .addressForm form fieldset .location .state, .addressForm form fieldset .location .zip {
+  .addressForm {
+    width: 50%; }
+    .addressForm h1 {
+      padding: .5rem 0rem  2rem 1rem; }
+    .addressForm form fieldset {
+      width: calc(97% - 1rem);
+      padding-left: 1rem;
+      padding-right: 1rem; }
+      .addressForm form fieldset .fullname, .addressForm form fieldset .email {
+        width: 100%;
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
         -webkit-flex-direction: column;
         -ms-flex-direction: column;
         flex-direction: column; }
-        .addressForm form fieldset .location .city input, .addressForm form fieldset .location .state input, .addressForm form fieldset .location .zip input {
+        .addressForm form fieldset .fullname input, .addressForm form fieldset .email input {
+          height: 5vh;
+          border-color: black;
           width: 100%; }
-    .addressForm form fieldset .country {
-      width: 50%; }
-      .addressForm form fieldset .country input {
-        width: 100%; } }
+      .addressForm form fieldset .address {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column; }
+        .addressForm form fieldset .address .address1, .addressForm form fieldset .address .address2 {
+          width: 100%; }
+          .addressForm form fieldset .address .address1 input, .addressForm form fieldset .address .address2 input {
+            width: 100%; }
+      .addressForm form fieldset .location {
+        width: 100%; }
+        .addressForm form fieldset .location .city, .addressForm form fieldset .location .state, .addressForm form fieldset .location .zip {
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+          flex-direction: column; }
+          .addressForm form fieldset .location .city input, .addressForm form fieldset .location .state input, .addressForm form fieldset .location .zip input {
+            width: 100%; }
+      .addressForm form fieldset .country {
+        width: 100%; }
+        .addressForm form fieldset .country input {
+          width: 100%; } }
 
 .checkoutForm .productPrice {
   display: -webkit-box;
@@ -643,7 +649,9 @@ body {
       padding: 0; }
     .container .addressForm {
       width: 50%;
-      padding: 0; } }
+      padding: 0; }
+    .container .checkoutForm {
+      width: 100%; } }
 
 @media screen and (min-width: 800px) {
   .container .itemForm {
