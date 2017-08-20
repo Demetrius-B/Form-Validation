@@ -1,12 +1,5 @@
 //=============== ADDRESS FORM ===============
 .addressForm
-  background-color: #caccce
-  display: flex
-  flex-direction: column
-  padding-left: 5vw
-  padding-right: 5vw
-  padding-top: 2rem
-  padding-bottom: 6rem
   h1
     color: black
     padding-bottom: 1.5rem
@@ -76,3 +69,33 @@
         input
           height: 5vh
           border-color: black
+
+@media screen and (min-width:426px)
+  .addressForm
+    h1
+      padding: .5rem 0rem  2rem 1rem
+    form
+      fieldset
+        width: calc(97% - 1rem)
+        padding-left: 1rem
+        padding-right: 1rem
+        .fullname, .email
+          width: 100%
+          flex-direction: column
+          input
+            height: 5vh
+            border-color: black
+            width: 100%
+        .address
+          flex-direction: column
+          .address1, .address2
+            input
+              width: 100%
+        .location
+          .city, .state, .zip
+            flex-direction: column
+            input
+              width: 100%
+        .country
+          input
+            width: 100%

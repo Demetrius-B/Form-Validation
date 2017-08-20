@@ -1,14 +1,8 @@
 //=============== ITEM FORM ===============
 .itemForm
-  background-color: white
-  display: flex
-  flex-direction: column
-  padding-left: 5vw
-  padding-right: 5vw
-  padding-top: 2rem
   h1
     padding-bottom: 1.5rem
-  article
+  .productImg
     img
       width: 90vw
     p
@@ -26,13 +20,27 @@
       display: flex
       flex-direction: row
       justify-content: space-between
-      input
-        height: 8vh
-        width: 27vw
-        background-color: gray
-        padding: .5rem
-        border: 0
-        text-transform: uppercase
+      label
+        position: relative
+        overflow: hidden
+        input
+          position: absolute
+          top: -20px
+          &:checked + span
+            border-color: black
+            border-width: .2rem
+            border-style: solid
+        span
+          display: flex
+          align-items: center
+          justify-content: center
+          height: 10vh
+          width: 17vw
+          background-color: gray
+          padding: .5rem
+          border: 0
+          cursor: pointer
+
   .selectColor
     display: flex
     flex-direction: column
@@ -50,15 +58,80 @@
         input
           position: absolute
           top: -20px
-          background-color: blue
           &:checked + span
-            background-color: black
+            border-color: black
+            border-width: .2rem
+            border-style: solid
         span
           height: 10vh
           width: 17vw
           background-color: gray
           padding: .5rem
           border: 0
-          text-transform: uppercase
           display: flex
           cursor: pointer
+
+@media screen and (min-width:426px)
+  .itemForm
+    justify-content: center
+    h1
+      padding: .5rem 0rem .5rem 1rem
+    .productImg
+      display: flex
+      flex-direction: column
+      align-items: center
+      width: calc(50vw - 2rem)
+      padding: 1rem
+      img
+        width: 90%
+      p
+        align-self: flex-end
+    .selectSize
+      p
+        padding-left: 1rem
+      form
+        width: 50vw
+        justify-content: space-evenly
+        label
+          width: 15vw
+          span
+            width: auto
+    .selectColor
+      p
+        padding-left: 1rem
+      form
+        width: 50vw
+        justify-content: space-evenly
+        label
+          width: 11vw
+        .green
+          span
+            width: auto
+            background-color: green
+        .red
+          span
+            width: auto
+            background-color: red
+        .gray
+          span
+            width: auto
+            background-color: gray
+        .blue
+          span
+            width: auto
+            background-color: blue
+
+@media screen and (min-width:800px)
+  .itemForm
+    .productImg
+      width: calc(100% - 1.9rem)
+    .selectSize
+      form
+        width: 100%
+        label
+          width: 10vw
+    .selectColor
+      form
+        width: 100%
+        label
+          width: 7vw

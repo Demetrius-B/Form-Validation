@@ -81,171 +81,536 @@ body {
   height: 100%;
   font-size: 1.8rem; }
 
-.itemForm {
-  background-color: white;
+.container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  padding-left: 5vw;
-  padding-right: 5vw;
-  padding-top: 2rem; }
-  .itemForm h1 {
-    padding-bottom: 1.5rem; }
-  .itemForm article img {
-    width: 90vw; }
-  .itemForm article p {
-    padding-top: 2rem;
-    text-align: right;
-    padding-bottom: 2rem; }
-  .itemForm .selectSize {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+  .container .itemForm {
+    background-color: white;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
     flex-direction: column;
-    padding-bottom: 3rem; }
-    .itemForm .selectSize p {
-      padding-bottom: 1rem; }
-    .itemForm .selectSize form {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between; }
-      .itemForm .selectSize form input {
-        height: 8vh;
-        width: 27vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-top: 2rem; }
+  .container .addressForm {
+    background-color: #caccce;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-top: 2rem;
+    padding-bottom: 6rem; }
+  .container .checkoutForm {
+    background-color: white;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-top: 1rem;
+    padding-bottom: 6rem; }
+
+@media screen and (min-width: 426px) {
+  .container {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row; }
+    .container .itemForm {
+      width: 50%;
+      padding: 0; }
+    .container .addressForm {
+      width: 50%;
+      padding: 0; } }
+
+@media screen and (min-width: 800px) {
+  .container .itemForm {
+    width: 33.33%; }
+  .container .addressForm {
+    width: 33.33%; }
+  .container .checkoutForm {
+    width: 33.33%;
+    padding: 0; } }
+
+.itemForm h1 {
+  padding-bottom: 1.5rem; }
+
+.itemForm .productImg img {
+  width: 90vw; }
+
+.itemForm .productImg p {
+  padding-top: 2rem;
+  text-align: right;
+  padding-bottom: 2rem; }
+
+.itemForm .selectSize {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding-bottom: 3rem; }
+  .itemForm .selectSize p {
+    padding-bottom: 1rem; }
+  .itemForm .selectSize form {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+    .itemForm .selectSize form label {
+      position: relative;
+      overflow: hidden; }
+      .itemForm .selectSize form label input {
+        position: absolute;
+        top: -20px; }
+        .itemForm .selectSize form label input:checked + span {
+          border-color: black;
+          border-width: .2rem;
+          border-style: solid; }
+      .itemForm .selectSize form label span {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        height: 10vh;
+        width: 17vw;
         background-color: gray;
         padding: .5rem;
         border: 0;
-        text-transform: uppercase; }
-  .itemForm .selectColor {
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 3rem; }
-    .itemForm .selectColor p {
-      padding-bottom: 1rem; }
-    .itemForm .selectColor form {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between; }
-      .itemForm .selectColor form label {
-        position: relative;
-        overflow: hidden; }
-        .itemForm .selectColor form label input {
-          position: absolute;
-          top: -20px;
-          background-color: blue; }
-          .itemForm .selectColor form label input:checked + span {
-            background-color: black; }
-        .itemForm .selectColor form label span {
-          height: 10vh;
-          width: 17vw;
-          background-color: gray;
-          padding: .5rem;
-          border: 0;
-          text-transform: uppercase;
-          display: flex;
-          cursor: pointer; }
+        cursor: pointer; }
 
-.addressForm {
-  background-color: #caccce;
+.itemForm .selectColor {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
   flex-direction: column;
-  padding-left: 5vw;
-  padding-right: 5vw;
-  padding-top: 2rem;
-  padding-bottom: 6rem; }
-  .addressForm h1 {
-    color: black;
-    padding-bottom: 1.5rem; }
-  .addressForm form fieldset .fullname, .addressForm form fieldset .email {
+  padding-bottom: 3rem; }
+  .itemForm .selectColor p {
+    padding-bottom: 1rem; }
+  .itemForm .selectColor form {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    width: 90vw;
-    padding-bottom: 1rem;
-    flex-direction: column; }
-    .addressForm form fieldset .fullname h4, .addressForm form fieldset .email h4 {
-      color: black;
-      padding-bottom: 1rem; }
-    .addressForm form fieldset .fullname input, .addressForm form fieldset .email input {
-      width: 90vw;
-      height: 5vh;
-      border-color: black; }
-  .addressForm form fieldset .address {
-    display: flex;
-    padding-bottom: 1rem;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
     justify-content: space-between; }
-    .addressForm form fieldset .address .address1 {
-      flex-direction: column; }
-      .addressForm form fieldset .address .address1 input {
+    .itemForm .selectColor form label {
+      position: relative;
+      overflow: hidden; }
+      .itemForm .selectColor form label input {
+        position: absolute;
+        top: -20px; }
+        .itemForm .selectColor form label input:checked + span {
+          border-color: black;
+          border-width: .2rem;
+          border-style: solid; }
+      .itemForm .selectColor form label span {
+        height: 10vh;
+        width: 17vw;
+        background-color: gray;
+        padding: .5rem;
+        border: 0;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
         display: flex;
-        height: 5vh;
-        border-color: black;
-        width: 40vw; }
-    .addressForm form fieldset .address .address2 {
-      flex-direction: column; }
-      .addressForm form fieldset .address .address2 input {
-        height: 5vh;
-        display: flex;
-        border-color: black;
-        width: 40vw; }
-  .addressForm form fieldset .location {
-    display: flex;
-    justify-content: space-between;
+        cursor: pointer; }
+
+@media screen and (min-width: 426px) {
+  .itemForm {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+    .itemForm h1 {
+      padding: .5rem 0rem .5rem 1rem; }
+    .itemForm .productImg {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      width: calc(50vw - 2rem);
+      padding: 1rem; }
+      .itemForm .productImg img {
+        width: 90%; }
+      .itemForm .productImg p {
+        -webkit-align-self: flex-end;
+        -ms-flex-item-align: end;
+        align-self: flex-end; }
+    .itemForm .selectSize p {
+      padding-left: 1rem; }
+    .itemForm .selectSize form {
+      width: 50vw;
+      -webkit-box-pack: space-evenly;
+      -webkit-justify-content: space-evenly;
+      -ms-flex-pack: space-evenly;
+      justify-content: space-evenly; }
+      .itemForm .selectSize form label {
+        width: 15vw; }
+        .itemForm .selectSize form label span {
+          width: auto; }
+    .itemForm .selectColor p {
+      padding-left: 1rem; }
+    .itemForm .selectColor form {
+      width: 50vw;
+      -webkit-box-pack: space-evenly;
+      -webkit-justify-content: space-evenly;
+      -ms-flex-pack: space-evenly;
+      justify-content: space-evenly; }
+      .itemForm .selectColor form label {
+        width: 11vw; }
+      .itemForm .selectColor form .green span {
+        width: auto;
+        background-color: green; }
+      .itemForm .selectColor form .red span {
+        width: auto;
+        background-color: red; }
+      .itemForm .selectColor form .gray span {
+        width: auto;
+        background-color: gray; }
+      .itemForm .selectColor form .blue span {
+        width: auto;
+        background-color: blue; } }
+
+@media screen and (min-width: 800px) {
+  .itemForm .productImg {
+    width: calc(100% - 1.9rem); }
+  .itemForm .selectSize form {
+    width: 100%; }
+    .itemForm .selectSize form label {
+      width: 10vw; }
+  .itemForm .selectColor form {
+    width: 100%; }
+    .itemForm .selectColor form label {
+      width: 7vw; } }
+
+.addressForm h1 {
+  color: black;
+  padding-bottom: 1.5rem; }
+
+.addressForm form fieldset .fullname, .addressForm form fieldset .email {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 90vw;
+  padding-bottom: 1rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+  .addressForm form fieldset .fullname h4, .addressForm form fieldset .email h4 {
+    color: black;
     padding-bottom: 1rem; }
-    .addressForm form fieldset .location .city {
+  .addressForm form fieldset .fullname input, .addressForm form fieldset .email input {
+    width: 90vw;
+    height: 5vh;
+    border-color: black; }
+
+.addressForm form fieldset .address {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 1rem;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+  .addressForm form fieldset .address .address1 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+    .addressForm form fieldset .address .address1 input {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
       display: flex;
-      flex-direction: column; }
-      .addressForm form fieldset .location .city input {
-        height: 5vh;
-        border-color: black;
-        width: 28vw; }
-    .addressForm form fieldset .location .state {
+      height: 5vh;
+      border-color: black;
+      width: 40vw; }
+  .addressForm form fieldset .address .address2 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+    .addressForm form fieldset .address .address2 input {
+      height: 5vh;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
       display: flex;
-      flex-direction: column; }
-      .addressForm form fieldset .location .state input {
-        height: 5vh;
-        border-color: black;
-        width: 10vw; }
-    .addressForm form fieldset .location .zip {
-      display: flex;
-      flex-direction: column; }
-      .addressForm form fieldset .location .zip input {
-        height: 5vh;
-        border-color: black; }
-  .addressForm form fieldset .country {
+      border-color: black;
+      width: 40vw; }
+
+.addressForm form fieldset .location {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding-bottom: 1rem; }
+  .addressForm form fieldset .location .city {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    padding-bottom: 1rem; }
-    .addressForm form fieldset .country input {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+    .addressForm form fieldset .location .city input {
+      height: 5vh;
+      border-color: black;
+      width: 28vw; }
+  .addressForm form fieldset .location .state {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+    .addressForm form fieldset .location .state input {
+      height: 5vh;
+      border-color: black;
+      width: 10vw; }
+  .addressForm form fieldset .location .zip {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+    .addressForm form fieldset .location .zip input {
       height: 5vh;
       border-color: black; }
 
-.checkoutForm {
-  background-color: white;
+.addressForm form fieldset .country {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
   flex-direction: column;
-  padding-left: 5vw;
-  padding-right: 5vw;
+  padding-bottom: 1rem; }
+  .addressForm form fieldset .country input {
+    height: 5vh;
+    border-color: black; }
+
+@media screen and (min-width: 426px) {
+  .addressForm h1 {
+    padding: .5rem 0rem  2rem 1rem; }
+  .addressForm form fieldset {
+    width: calc(97% - 1rem);
+    padding-left: 1rem;
+    padding-right: 1rem; }
+    .addressForm form fieldset .fullname, .addressForm form fieldset .email {
+      width: 100%;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column; }
+      .addressForm form fieldset .fullname input, .addressForm form fieldset .email input {
+        height: 5vh;
+        border-color: black;
+        width: 100%; }
+    .addressForm form fieldset .address {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column; }
+      .addressForm form fieldset .address .address1 input, .addressForm form fieldset .address .address2 input {
+        width: 100%; }
+    .addressForm form fieldset .location .city, .addressForm form fieldset .location .state, .addressForm form fieldset .location .zip {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column; }
+      .addressForm form fieldset .location .city input, .addressForm form fieldset .location .state input, .addressForm form fieldset .location .zip input {
+        width: 100%; }
+    .addressForm form fieldset .country input {
+      width: 100%; } }
+
+.checkoutForm .productPrice {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  border-bottom-color: gray;
+  border-bottom-width: .2rem;
+  border-bottom-style: solid;
+  padding-top: 3rem;
+  padding-bottom: 2rem; }
+
+.checkoutForm .shippingPrice {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+  border-bottom-color: gray;
+  border-bottom-width: .2rem;
+  border-bottom-style: solid; }
+  .checkoutForm .shippingPrice div > p {
+    padding-bottom: .5rem; }
+
+.checkoutForm .shippingAddress {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   padding-top: 1rem;
-  padding-bottom: 6rem; }
-  .checkoutForm .productPrice {
-    display: flex;
-    justify-content: space-between;
-    border-bottom-color: gray;
-    border-bottom-width: .2rem;
-    border-bottom-style: solid;
-    padding-top: 3rem;
-    padding-bottom: 2rem; }
-  .checkoutForm .shippingPrice {
-    display: flex;
-    justify-content: space-between;
-    padding-top: 3rem;
-    padding-bottom: 1rem;
-    border-bottom-color: gray;
-    border-bottom-width: .2rem;
-    border-bottom-style: solid; }
-    .checkoutForm .shippingPrice div > p {
-      padding-bottom: .5rem; }
-  .checkoutForm .shippingAddress {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    padding-top: 1rem;
+  padding-bottom: 4rem; }
+  .checkoutForm .shippingAddress p:nth-of-type(1) {
     padding-bottom: 1rem; }
-    .checkoutForm .shippingAddress p:nth-of-type(1) {
-      padding-bottom: 1rem; }
+
+.checkoutForm .formBtn {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 90vw;
+  height: 5vh; }
+  .checkoutForm .formBtn form {
+    width: 90vw;
+    height: 5vh; }
+
+@media screen and (min-width: 426px) {
+  .formBtn form button {
+    width: 100%;
+    height: 8vh;
+    border-radius: 1rem;
+    border: 0; } }
+
+@media screen and (min-width: 800px) {
+  .checkoutForm .productPrice, .checkoutForm .shippingPrice, .checkoutForm .shippingAddress {
+    padding-left: .5rem;
+    padding-right: .5rem; }
+  .checkoutForm .formBtn {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 100%; }
+    .checkoutForm .formBtn form {
+      width: 90%; }
+      .checkoutForm .formBtn form button {
+        width: 100%; } }
