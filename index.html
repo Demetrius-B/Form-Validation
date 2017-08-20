@@ -1,119 +1,116 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Shopping Cart</title>
-    <link rel="stylesheet" href="css/main.css">
-  </head>
-  <body>
-    <div class="container">
-      <div class="itemForm">
-        <h1>Product Name</h1>
-        <div class="productImg">
-          <img src="img/placeholder.jpeg" alt="Product Preview Image">
-          <p>$20.00</p>
-        </div>
-        <div class="selectSize">
-          <p>Select a size</p>
-          <form class="size">
-            <label class="smallBtn"><input type="radio" name="sizeBtn"><span>Small</span></label>
-            <label class="mediumBtn"><input type="radio" name="sizeBtn"><span>Medium</span></label>
-            <label class="largeBtn"><input type="radio" name="sizeBtn"><span>Large</span></label>
-          </form>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shopping Cart</title>
+  <link rel="stylesheet" href="css/main.css">
+  <script type="text/javascript" src="js/form_action.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <div class="itemForm">
+      <h1>Product Name</h1>
+      <div class="productImg">
+        <img src="img/placeholder.jpeg" alt="Product Preview Image">
+        <p>$20.00</p>
+      </div>
+      <div class="selectSize">
+        <p>Select a size</p>
+        <form class="cartForm" method="post">
+          <label class="smallBtn"><input type="radio" name="sizeBtn" id="sBtn"><span>Small</span></label>
+          <label class="mediumBtn"><input type="radio" name="sizeBtn" id="mBtn"><span>Medium</span></label>
+          <label class="largeBtn"><input type="radio" name="sizeBtn" id="lBtn"><span>Large</span></label>
         </div>
         <div class="selectColor">
           <p>Select a color</p>
-          <form class="color" action=" ">
-            <label class="green"><input type="radio" name="colorBtn"><span></span></label>
-            <label class="red"><input type="radio" name="colorBtn"><span></span></label>
-            <label class="gray"><input type="radio" name="colorBtn"><span></span></label>
-            <label class="blue"><input type="radio" name="colorBtn"><span></span></label>
-          </form>
+          <fieldset>
+            <div class="colorFields">
+              <label class="green"><input type="radio" name="colorBtn" id="grBtn"><span></span></label>
+              <label class="red"><input type="radio" name="colorBtn" id="rBtn"><span></span></label>
+              <label class="gray"><input type="radio" name="colorBtn" id="gBtn"><span></span></label>
+              <label class="blue"><input type="radio" name="colorBtn" id="bBtn"><span></span></label>
+            </div>
+          </fieldset>
         </div>
       </div>
       <div class="addressForm">  <!--Address Form -->
         <h1>Shipping Details</h1>
-        <form id="addressInfo" action="" method="">
-          <fieldset>
+        <fieldset>
+          <div class="shippingFields">
             <div class="fullname">
-              <label for="fullName1">Full Name</label>
-              <input type="text" name="fullNameInput" id="fullName1"> </input>
+            <label for="fullName1">Full Name</label>
+            <input type="text" name="fullNameInput" id="fullName1" required> </input>
+          </div>
+          <div class="email">
+            <label for="email1">Email</label>
+            <input type="text" name="emailInput" id="email1" required> </input>
+            <div id="emailFeeback"> </div>
+          </div>
+          <div class="address">
+            <div class="address1">
+              <label for="addressId">Address</label>
+              <input type="text" name="addressInput" id="addressId" required> </input>
             </div>
-            <div class="email">
-              <label for="email1">Email</label>
-              <input type="text" name="emailInput" id="email1"> </input>
-              <div id="emailFeeback"> </div>
+            <div class="address2">
+              <label for="addressId2">Address 2</label>
+              <input type="text" name="address2Input" id="addressId2"> </input>
             </div>
-            <div class="address">
-              <div class="address1">
-                <label for="addressId">Address</label>
-                <input type="text" name="addressInput" id="addressId"> </input>
-              </div>
-              <div class="address2">
-                <label for="addressId2">Address 2</label>
-                <input type="text" name="address2Input" id="addressId2"> </input>
-              </div>
+          </div>
+          <div class="location">
+            <div class="city">
+              <label for="cityId">City</label>
+              <input type="text" name="cityInput" id="cityId" required> </input>
             </div>
-            <div class="location">
-                <div class="city">
-                  <label for="cityId">City</label>
-                  <input type="text" name="cityInput" id="cityId"> </input>
-                </div>
-                <div class="state">
-                  <label for="stateId">State</label>
-                  <input type="text" name="stateInput" id="stateId"> </input>
-                </div>
-
-                <div class="zip">
-                  <label for="zipId">Zip</label>
-                  <input type="text" name="zipInput" id="zipId"> </input>
-                </div>
-              </div>
-            <div class="country">
-              <label for="countryId">Country</label>
-              <input type="text" name="country" id="countryId"> </input>
+            <div class="state">
+              <label for="stateId">State</label>
+              <input type="text" name="stateInput" id="stateId" required> </input>
             </div>
-          </fieldset>
-        </form>
+            <div class="zip">
+              <label for="zipId">Zip</label>
+              <input type="text" name="zipInput" id="zipId" required> </input>
+            </div>
+          </div>
+          <div class="country">
+            <label for="countryId">Country</label>
+            <input type="text" name="country" id="countryId" required> </input>
+          </div>
+        </fieldset>
       </div>
 
-    <div class="checkoutForm">
-      <h1>Order Summary</h1>
-      <div class="productPrice">
-        <p>Product Name</p>
-        <p>$20.00</p>
-      </div>
-
-      <div class="shippingPrice">
-        <div class="">
-          <p>Shipping</p>
-          <p>Total</p>
-        </div>
-
-        <div class="">
-          <p>Free</p>
+      <div class="checkoutForm">
+        <h1>Order Summary</h1>
+        <div class="productPrice">
+          <p>Product Name</p>
           <p>$20.00</p>
         </div>
-      </div>
 
-      <div class="shippingAddress">
-        <p>Shipping Address</p>
+        <div class="shippingPrice">
+          <div class="">
+            <p>Shipping</p>
+            <p>Total</p>
+          </div>
 
-        <p>Sara Smith</p>
-        <p>23412 S University Ave</p>
-        <p>Winter Park, FL 32192</p>
-      </div>
+          <div class="">
+            <p>Free</p>
+            <p>$20.00</p>
+          </div>
+        </div>
 
-      <div class="formBtn">
-        <form class="" action="index.html" method="post">
-          <button type="button" name="button">Complete Order</button>
+        <div class="shippingAddress">
+          <p>Shipping Address</p>
+
+          <p>Sara Smith</p>
+          <p>23412 S University Ave</p>
+          <p>Winter Park, FL 32192</p>
+
+        <div class="formBtn">
+          <button class="submitBtn" type="submit" name="button">Complete Order</button>
         </form>
       </div>
-
-
+    </div>
     </div>
   </div>
-  </body>
+</body>
 
 </html>

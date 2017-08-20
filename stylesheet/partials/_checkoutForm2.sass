@@ -1,0 +1,85 @@
+//=============== CHECKOUT FORM ===============
+.container
+  display: flex
+  .checkoutForm
+    width: 100%
+    background-color: white
+    display: flex
+    flex-direction: column
+    padding-left: 5vw
+    padding-right: 5vw
+    padding-top: 1rem
+    padding-bottom: 6rem
+    .productPrice
+      display: flex
+      justify-content: space-between
+      border-bottom-color: gray
+      border-bottom-width: .2rem
+      border-bottom-style: solid
+      padding-top: 3rem
+      padding-bottom: 2rem
+    .shippingPrice
+      display: flex
+      justify-content: space-between
+      padding-top: 3rem
+      padding-bottom: 1rem
+      border-bottom-color: gray
+      border-bottom-width: .2rem
+      border-bottom-style: solid
+      div > p
+        padding-bottom: .5rem
+
+    .shippingAddress
+      display: flex
+      justify-content: space-between
+      flex-direction: column
+      padding-top: 1rem
+      padding-bottom: 4rem
+      p:nth-of-type(1)
+        padding-bottom: 1rem
+
+      .formBtn
+        display: flex
+        align-items: center
+        width: 100%
+        height: 5vh
+        justify-content: center
+        padding-top: 2rem
+        button
+          width: 100%
+          height: 6vh
+          border-radius: 1rem
+          border: 0
+          background-color: green
+          font-weight: bold
+          font-size: 1.7rem
+
+@media screen and (min-width:31rem)
+  .container
+    .checkoutForm
+      width: 100%
+      .shippingAddress
+        .formBtn
+          padding-top: 10rem
+@media screen and (min-width:50rem)
+  .container
+    .checkoutForm
+      width: 33.33%
+      padding: 0
+      h1
+        padding: .5rem 0rem  1rem 1rem
+
+      .productPrice
+        p
+          padding-left: 1rem
+          padding-right: 1rem
+      .shippingPrice
+        p
+          padding-left: 1rem
+          padding-right: 1rem
+      .shippingAddress
+        p
+          padding-left: 1rem
+        .formBtn
+          width: 90%
+          align-self: center

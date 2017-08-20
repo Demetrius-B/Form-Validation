@@ -3,8 +3,8 @@
   h1
     color: black
     padding-bottom: 1.5rem
-  form
-    fieldset
+  fieldset
+    .shippingFields
       .fullname, .email
         display: flex
         width: 90vw
@@ -79,12 +79,11 @@
 
 @media screen and (min-width:426px)
   .addressForm
-    width: 50%
     h1
       padding: .5rem 0rem  2rem 1rem
-    form
-      fieldset
-        width: calc(97% - 1rem)
+    fieldset
+      .shippingFields
+        width: 50%
         padding-left: 1rem
         padding-right: 1rem
         .fullname, .email
@@ -97,7 +96,7 @@
         .address
           flex-direction: column
           .address1, .address2
-            width: 100%
+            width: 50%
             input
               width: 100%
         .location
@@ -110,3 +109,14 @@
           width: 100%
           input
             width: 100%
+@media screen and (min-width:80rem)
+  .container
+    .itemForm
+      width: 33.33%
+      padding: 0
+    .addressForm
+      width: 33.33%
+      padding: 0
+    .checkoutForm
+      width: 33.33%
+      padding: 0
