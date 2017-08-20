@@ -14,7 +14,7 @@
           color: black
           padding-bottom: 1rem
         input
-          width: 90vw
+          width: 100%
           height: 5vh
           border-color: black
 
@@ -22,51 +22,58 @@
         display: flex
         padding-bottom: 1rem
         justify-content: space-between
-
+        width: 90vw
         .address1
           flex-direction: column
+          width: 48%
           input
             display: flex
             height: 5vh
             border-color: black
-            width: 40vw
-
+            width: 100%
         .address2
           flex-direction: column
+          width: 48%
           input
             height: 5vh
             display: flex
             border-color: black
-            width: 40vw
+            width: 100%
+
       .location
         display: flex
         justify-content: space-between
         padding-bottom: 1rem
+        width: 90vw
         .city
           display: flex
           flex-direction: column
+          width: 40%
           input
             height: 5vh
             border-color: black
-            width: 28vw
         .state
           display: flex
           flex-direction: column
+          width: 20%
           input
             height: 5vh
             border-color: black
-            width: 10vw
         .zip
+          width: 35%
           display: flex
           flex-direction: column
           input
             height: 5vh
             border-color: black
+            width: 100%
       .country
         display: flex
         flex-direction: column
         padding-bottom: 1rem
+        width: 90vw
         input
+          width: 100%
           height: 5vh
           border-color: black
 
@@ -80,7 +87,7 @@
         padding-left: 1rem
         padding-right: 1rem
         .fullname, .email
-          width: 100%
+          width: 50%
           flex-direction: column
           input
             height: 5vh
@@ -92,10 +99,12 @@
             input
               width: 100%
         .location
+          width: 50%
           .city, .state, .zip
             flex-direction: column
             input
               width: 100%
         .country
+          width: 50%
           input
             width: 100%

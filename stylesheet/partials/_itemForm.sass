@@ -14,6 +14,7 @@
     display: flex
     flex-direction: column
     padding-bottom: 3rem
+    width: 90vw
     p
       padding-bottom: 1rem
     form
@@ -21,6 +22,7 @@
       flex-direction: row
       justify-content: space-between
       label
+        width: 30%
         position: relative
         overflow: hidden
         input
@@ -31,11 +33,10 @@
             border-width: .2rem
             border-style: solid
         span
+          height: 5vh
           display: flex
           align-items: center
           justify-content: center
-          height: 10vh
-          width: 17vw
           background-color: gray
           padding: .5rem
           border: 0
@@ -52,6 +53,14 @@
       display: flex
       flex-direction: row
       justify-content: space-between
+      .green > span
+        background-color: green
+      .red > span
+        background-color: red
+      .gray > span
+        background-color: gray
+      .blue > span
+        background-color: blue
       label
         position: relative
         overflow: hidden
@@ -65,11 +74,11 @@
         span
           height: 10vh
           width: 17vw
-          background-color: gray
           padding: .5rem
           border: 0
           display: flex
           cursor: pointer
+
 
 @media screen and (min-width:426px)
   .itemForm
@@ -92,6 +101,14 @@
       form
         width: 50vw
         justify-content: space-evenly
+        .green > span
+          background-color: green
+        .red > span
+          background-color: red
+        .gray > span
+          background-color: gray
+        .blue > span
+          background-color: blue
         label
           width: 15vw
           span
