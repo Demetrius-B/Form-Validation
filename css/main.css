@@ -214,3 +214,38 @@ body {
     .addressForm form fieldset .country input {
       height: 5vh;
       border-color: black; }
+
+.checkoutForm {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  padding-top: 1rem;
+  padding-bottom: 6rem; }
+  .checkoutForm .productPrice {
+    display: flex;
+    justify-content: space-between;
+    border-bottom-color: gray;
+    border-bottom-width: .2rem;
+    border-bottom-style: solid;
+    padding-top: 3rem;
+    padding-bottom: 2rem; }
+  .checkoutForm .shippingPrice {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+    border-bottom-color: gray;
+    border-bottom-width: .2rem;
+    border-bottom-style: solid; }
+    .checkoutForm .shippingPrice div > p {
+      padding-bottom: .5rem; }
+  .checkoutForm .shippingAddress {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding-top: 1rem;
+    padding-bottom: 1rem; }
+    .checkoutForm .shippingAddress p:nth-of-type(1) {
+      padding-bottom: 1rem; }
