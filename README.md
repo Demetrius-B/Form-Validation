@@ -10,7 +10,7 @@ I will be building a responsive, accessible shopping/checkout form with custom v
 # Project Instructions:
 Select a size and color. Fill out the shipping details. Review your order summary then click the checkout button.
 
-# Form Requirements : TODO
+# Form Requirements : DONE
 Product size or equivalent depending on your design choice (required, single size)
 Product color or equivalent depending on your design choice (required, single color)
 Name (required)
